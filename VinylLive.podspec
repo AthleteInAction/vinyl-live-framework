@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "VinylLive"
-  s.version      = "0.0.1"
+  s.version      = "1.0.0"
   s.summary      = "A"
 
   # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   B
                    DESC
 
-  s.homepage     = "http://www.wambl.com"
+  s.homepage     = "https://github.com/onlyexcellence/vinyl-live-framework"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -65,7 +65,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  s.platform     = :ios, "11.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -91,8 +91,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "VinylLive/**/*"
+  # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -134,5 +134,7 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
+  s.dependency 'SwiftyJSON', '~> 4.0'
+  s.dependency 'Starscream', '~> 3.0.2'
 
 end

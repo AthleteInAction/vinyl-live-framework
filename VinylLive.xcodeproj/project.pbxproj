@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		692B4FBD21C3C4820075B396 /* VinylLive.h in Headers */ = {isa = PBXBuildFile; fileRef = 692B4FBB21C3C4820075B396 /* VinylLive.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		692B4FC521C3CBA70075B396 /* VNLApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692B4FC421C3CBA70075B396 /* VNLApiClient.swift */; };
+		BE48601AA409A38748953C3B /* Pods_VinylLive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A4E6704D2861DF6C7CBC5F /* Pods_VinylLive.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		593C6B4F95D1D555C2C257BC /* Pods-VinylLive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinylLive.release.xcconfig"; path = "Pods/Target Support Files/Pods-VinylLive/Pods-VinylLive.release.xcconfig"; sourceTree = "<group>"; };
 		692B4FB821C3C4820075B396 /* VinylLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VinylLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		692B4FBB21C3C4820075B396 /* VinylLive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VinylLive.h; sourceTree = "<group>"; };
 		692B4FBC21C3C4820075B396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		692B4FC421C3CBA70075B396 /* VNLApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNLApiClient.swift; sourceTree = "<group>"; };
+		79A4E6704D2861DF6C7CBC5F /* Pods_VinylLive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VinylLive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9D932D41D32AB27A9A38E8A /* Pods-VinylLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinylLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VinylLive/Pods-VinylLive.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +27,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE48601AA409A38748953C3B /* Pods_VinylLive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		411C4262E8E7422E5B074DEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79A4E6704D2861DF6C7CBC5F /* Pods_VinylLive.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		692B4FAE21C3C4820075B396 = {
 			isa = PBXGroup;
 			children = (
 				692B4FBA21C3C4820075B396 /* VinylLive */,
 				692B4FB921C3C4820075B396 /* Products */,
+				905B5521DB08D71CE2DF6FB9 /* Pods */,
+				411C4262E8E7422E5B074DEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,10 +63,28 @@
 		692B4FBA21C3C4820075B396 /* VinylLive */ = {
 			isa = PBXGroup;
 			children = (
+				692B4FC321C3CB9C0075B396 /* lib */,
 				692B4FBB21C3C4820075B396 /* VinylLive.h */,
 				692B4FBC21C3C4820075B396 /* Info.plist */,
 			);
 			path = VinylLive;
+			sourceTree = "<group>";
+		};
+		692B4FC321C3CB9C0075B396 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				692B4FC421C3CBA70075B396 /* VNLApiClient.swift */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		905B5521DB08D71CE2DF6FB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9D932D41D32AB27A9A38E8A /* Pods-VinylLive.debug.xcconfig */,
+				593C6B4F95D1D555C2C257BC /* Pods-VinylLive.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,6 +105,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 692B4FC021C3C4820075B396 /* Build configuration list for PBXNativeTarget "VinylLive" */;
 			buildPhases = (
+				1D6B5022AB8BFAA1CD79B22C /* [CP] Check Pods Manifest.lock */,
 				692B4FB321C3C4820075B396 /* Headers */,
 				692B4FB421C3C4820075B396 /* Sources */,
 				692B4FB521C3C4820075B396 /* Frameworks */,
@@ -95,6 +131,7 @@
 				TargetAttributes = {
 					692B4FB721C3C4820075B396 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -125,11 +162,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D6B5022AB8BFAA1CD79B22C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VinylLive-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		692B4FB421C3C4820075B396 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				692B4FC521C3CBA70075B396 /* VNLApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +319,9 @@
 		};
 		692B4FC121C3C4820075B396 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9D932D41D32AB27A9A38E8A /* Pods-VinylLive.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -278,6 +339,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wambl.VinylLive;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,7 +347,9 @@
 		};
 		692B4FC221C3C4820075B396 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 593C6B4F95D1D555C2C257BC /* Pods-VinylLive.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

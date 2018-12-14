@@ -1,0 +1,6 @@
+framework module Pods_VinylLive {
+  umbrella header "Pods-VinylLive-umbrella.h"
+
+  export *
+  module * { export * }
+}
